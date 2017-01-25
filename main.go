@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"fmt"
+	"github.com/tealeg/xlsx"
+	"time"
 )
 
 type Error struct {
@@ -16,8 +18,35 @@ func main() {
 	var x map[string]Error
 	data, _ := ioutil.ReadFile("./errors.json")
 
-	decoder := json.Unmarshal(data, &x)
-	fmt.Println(decoder)
-	fmt.Println(x)
+	err := json.Unmarshal(data, &x)
+	if err != nil {
+		panic(err)
+	}
+	// Convert the map to Excel file
+	WriteErrorsInExcel(x)
+}
 
+func WriteErrorsInExcel(errors map[string]Error){
+	file := xlsx.NewFile()
+	sheet, err := file.AddSheet("Errors")
+	// Creating the new file
+	if err != nil {
+		panic(err)
+	}
+	for index, errorMsg := range errors {
+		row := sheet.AddRow()
+		errorNameCell := row.AddCell()
+		codeCell := row.AddCell()
+		statusCell := row.AddCell()
+		messageCell := row.AddCell()
+		errorNameCell.SetValue(index)
+		codeCell.SetValue(errorMsg.Code)
+		statusCell.SetValue(errorMsg.Status)
+		messageCell.SetValue(errorMsg.Message)
+	}
+	// Saving the file with time to prevent colision
+	err = file.Save(fmt.Sprintf("errors-%v.xlsx", time.Now().Unix()))
+	if err != nil {
+		panic(err)
+	}
 }
