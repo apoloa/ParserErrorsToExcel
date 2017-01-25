@@ -1,0 +1,227 @@
+{
+  "ERROR_BACKEND_LEGACY": {
+    "status": 500,
+    "code": -1,
+    "message": "Problem with backend"
+  },
+  "MALFORMED_JSON": {
+    "status": 400,
+    "code": 100,
+    "message": "Malformed JSON parameters"
+  },
+  "USERS_ERROR_REQUEST": {
+    "status": 500,
+    "code": 102,
+    "message": "Request for create users was incorrect"
+  },
+  "STORMPATH_ERROR_REQUEST": {
+    "status": 500,
+    "code": 103,
+    "message": "Request for Stormpath user was incorrect"
+  },
+  "SEND_SMS_ERROR_REQUEST": {
+    "status": 500,
+    "code": 104,
+    "message": "Request to send SMS was incorrect"
+  },
+  "USER_NOT_AUTHORIZED": {
+    "status": 401,
+    "code": 105,
+    "message": "User Not Authorized"
+  },
+  "PROBLEM_LOGIN_USER": {
+    "status": 500,
+    "code": 106,
+    "message": "User Registered, but we have problems with login"
+  },
+  "USER_SERVICE_NOT_RESPONDING": {
+    "status": 500,
+    "code": 107,
+    "message": "Underlying user service not responding"
+  },
+  "PHONE_ALREADY_EXISTS": {
+    "status": 409,
+    "code": 219,
+    "message": "Phone already Exists"
+  },
+  "MISSING_BODY": {
+    "status": 400,
+    "code": 403,
+    "message": "Missing request body"
+  },
+  "INVALID_TOKEN": {
+    "status": 400,
+    "code": 108,
+    "message": "Invalid token"
+  },
+  "CARDS_SERVICE": {
+    "status": 500,
+    "code": 109,
+    "message": "Underlying cards service not responding"
+  },
+  "VACUUM_SERVICE": {
+    "status": 500,
+    "code": 110,
+    "message": "Underlying vacuum service not responding"
+  },
+  "SERVICE_NOT_RESPONDING": {
+    "status": 500,
+    "code": 111,
+    "message": "Underlying service not responding"
+  },
+  "IMAGE_SERVICE": {
+    "status": 500,
+    "code": 112,
+    "message": "Error in image service"
+  },
+  "USERS_DETAILS_SERVICE": {
+    "status": 500,
+    "code": 113,
+    "message": "User Details problems"
+  },
+  "CONTACTS_SERVICE": {
+    "status": 500,
+    "code": 114,
+    "message": "Contacts service error"
+  },
+  "REFRESH_TOKEN": {
+    "status": 500,
+    "code": 115,
+    "message": "Could not refresh the token"
+  },
+  "CHECK_TOKEN": {
+    "status": 500,
+    "code": 116,
+    "message": "Could not validate the token"
+  },
+  "PUB_NUB_TOKEN": {
+    "status": 500,
+    "code": 117,
+    "message": "Could not set token for pubnub security, chat and notification will stop soon"
+  },
+  "LANGUAGE_NOT_SUPPLIED": {
+    "status": 400,
+    "code": 118,
+    "message": "Language should be supplied in the accept-language header"
+  },
+  "CHATS_SERVICE": {
+    "status": 500,
+    "code": 119,
+    "message": "Error in chats service"
+  },
+  "CHATS_CARD_ID": {
+    "status": 400,
+    "code": 120,
+    "message": "Card id missing in the body"
+  },
+  "IMAGE_RELATE": {
+    "status": 500,
+    "code": 121,
+    "message": "Image relate service problem"
+  },
+  "CATEGORIES_NOT_ARRAY": {
+    "status": 500,
+    "code": 122,
+    "message": "Categories should be an array if supplied"
+  },
+  "SERVICE": {
+    "status": 500,
+    "code": 123,
+    "message": "Request failed"
+  },
+  "TOKEN_NOT_SUPPLIED": {
+    "status": 400,
+    "code": 124,
+    "message": "Token not supplied"
+  },
+  "COUNTRY_PREFIX_NOT_SENT": {
+    "status": 400,
+    "code": 125,
+    "message": "Country prefix has to be sent and be numeric only"
+  },
+  "TYPE": {
+    "status": 400,
+    "code": 126,
+    "message": "the type, if specified, can be either tinker or linker"
+  },
+  "OTHER_USER_ID_NOT_PASSED": {
+    "status": 400,
+    "code": 127,
+    "message": "You have to send other user id, and it should be a long int represented as string"
+  },
+  "PHONE_REQUIRED": {
+    "status": 400,
+    "code": 200,
+    "message": "Phone is required"
+  },
+  "EMAIL_REQUIRED": {
+    "status": 400,
+    "code": 201,
+    "message": "Email is required"
+  },
+  "PASSWORD_REQUIRED": {
+    "status": 400,
+    "code": 202,
+    "message": "Password is required"
+  },
+  "FIRST_NAME_REQUIRED": {
+    "status": 400,
+    "code": 203,
+    "message": "First Name is required"
+  },
+  "LAST_NAME_REQUIRED": {
+    "status": 400,
+    "code": 204,
+    "message": "Last Name is required"
+  },
+  "COUNTRY_REQUIRED": {
+    "status": 400,
+    "code": 205,
+    "message": "Country is required"
+  },
+  "BIRTHDAY_REQUIRED": {
+    "status": 400,
+    "code": 206,
+    "message": "Birthday is required"
+  },
+  "GENDER_REQUIRED": {
+    "status": 400,
+    "code": 207,
+    "message": "Gender is required"
+  },
+  "INCORRECT_TYPE": {
+    "status": 400,
+    "code": 301,
+    "message": "Incorrect Type in Request"
+  },
+  "ID_REQUIRED": {
+    "status": 400,
+    "code": 400,
+    "message": "Id is required"
+  },
+  "SMS_SEND": {
+    "status": 500,
+    "code": 900,
+    "message": "Fails to send to phone"
+  },
+  "CATEGORY_REQUIRED": {
+    "status": 400,
+    "code": 1300,
+    "message": "Category required"
+  },
+  "TYPE_LINKER_TINKER_REQUIRED": {
+    "status": 400,
+    "code": 1400,
+    "message": "Type is required"
+  },
+  "QUERY_REQUIRED": {
+    "status": 400,
+    "code": 1401,
+    "message": "Query required for search"
+  },
+  "ELASTIC_PROBLEMS": {
+    "status": 500,
+    "code": 1402,
+    "message": "Problems in the petition"
+  }
+}
